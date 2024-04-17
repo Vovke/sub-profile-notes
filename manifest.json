@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Sub Profile Notes",
+    "version": "1.0",
+    "permissions": ["storage", "downloads"],
+    "action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://polkadot.subsquare.io/user/*"],
+            "js": ["content.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "icons": {
+        "48": "icon.png"
+    }
+}
